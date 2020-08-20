@@ -9,6 +9,7 @@ public class Test {
         InvocationHandler handler = new MyHandler(person);
         Person s = (Person) Proxy.newProxyInstance(Person.class.getClassLoader(), new Class<?>[]{Person.class}, handler);
         s.say();
+        System.out.println("程序结束");
 
     }
 }
